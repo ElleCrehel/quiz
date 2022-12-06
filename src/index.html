@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz app</title>
+    <!--Link to css file-->
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="header_main">
+        <div class="header">
+          <h1>Dev Quiz</h1>
+        </div>
+        <div class="main">
+          <!--1) DIFFICULTY-->
+          <div class="difficulty">
+            <h2>How hard would you like this game to be?</h2>
+
+            <div class="button btn_difficulty">
+              <button class="button btn_easy">easy</button>
+
+              <button class="button btn_medium">medium</button>
+
+              <button class="button btn_hard">hard</button>
+            </div>
+          </div>
+
+          <!--2) CATEGORIES-->
+          <div class="categories">
+            <h3>Choose a categorie</h3>
+            <button class="btn_categorie Linux">Linux</button>
+            <button class="btn_categorie PHP">PHP</button>
+            <button class="btn_categorie Docker">Docker</button>
+            <button class="btn_categorie HTML">HTML</button>
+            <button class="btn_categorie MySQL">MySQL</button>
+            <button class="btn_categorie WordPress">WordPress</button>
+            <button class="btn_categorie Laravel">Laravel</button>
+            <button class="btn_categorie Kubernetes">Kubernetes</button>
+            <button class="btn_categorie Javascript">Javascript</button>
+            <button class="btn_categorie DevOps">DevOps</button>
+            <button class="btn_categorie BASH">BASH</button>
+          </div>
+
+          <!-- 3) LIMIT-->
+          <div class="limit">
+            <h4>how many questions would you like to answer?</h4>
+            <div class="slider">
+              <input type="range" min="1" max="30" value="1" id="range" />
+            </div>
+          </div>
+        </div>
+        <button class="start_game">start game</button>
+      </div>
+
+      <!--4) QUESTIONS-->
+
+      <div class="questions hidden">
+        <h2 class="question">What is the correct answer?</h2>
+        <h3 class="question_index"></h3>
+        <div class="timer">
+          <div class="time_text">Time Left:</div>
+          <div class="timer_sec">15</div>
+        </div>
+
+        <div id="game"></div>
+        <button class="stopGame">Quit game</button>
+      </div>
+
+      <!--5) RESULTS-->
+      <div class="results hidden">
+        <p>This is the end of the game</p>
+        <class class="score"></class>
+        <class class="results_questions"></class>
+        <button class="replay">Replay</button>
+      </div>
+    </div>
+    <!--Link to scripts-->
+    <script src="./app/app.js"></script>
+  </body>
+</html>
